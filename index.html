@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #0a0a0a;
+      color: #f0ebe3;
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      background-image: radial-gradient(ellipse at 20% 50%, #1a1040 0%, transparent 60%),
+                        radial-gradient(ellipse at 80% 20%, #0d2030 0%, transparent 50%);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-style: italic;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, #f0ebe3, #c9a96e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeUp 1s ease forwards;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 300;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #8a8070;
+      animation: fadeUp 1s ease 0.3s both;
+    }
+
+    .line {
+      width: 40px;
+      height: 1px;
+      background: #c9a96e;
+      margin: 2rem auto;
+      animation: expand 1s ease 0.6s both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes expand {
+      from { width: 0; opacity: 0; }
+      to   { width: 40px; opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Ton Nom</h1>
+  <div class="line"></div>
+  <p>Ta description ici</p>
+</body>
+</html>
